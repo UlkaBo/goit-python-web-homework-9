@@ -85,6 +85,9 @@ def add_ph(data): #+
         name, phone = data.split()
         phone = re.sub(r'[^\d]', '', phone)
         result = session.query(Abonent.abonent_id).filter(Abonent.name==name).first()
+        print(type(result), result)
+        #result = session.query(Abonent.abonent_id).filter(Abonent.name==name)
+        #print(type(result), result)
 
         if not result:
             # добавляем в phone_book  нового абонента,

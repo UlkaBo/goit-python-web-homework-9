@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
-_CONN = 'postgresql://postgres:6894@localhost:5432/postgres'
+_CONN = 'postgresql://...:...@localhost:5432/postgres'
 
 engine = create_engine(_CONN)
 
@@ -21,7 +21,7 @@ if 'addressbook' not in databases:
 
 _CONN = 'postgresql://postgres:6894@localhost:5432/addressbook'
 engine = create_engine(_CONN, echo = True)
-
+print(1)
 #databases = engine.execute('SELECT datname FROM pg_database;').scalars().fetchall()
 #print(databases)
 
